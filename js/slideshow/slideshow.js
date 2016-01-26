@@ -8,9 +8,9 @@ $(function($){
 		// Components							
 		slide_links			:	'false',
 		slides 				:  	[			// Slideshow Images
-										{image : 'http://placehold.it/1920x1080'},
-										{image : 'http://placehold.it/1920x1080'},  
-										{image : 'http://placehold.it/1920x1080'}
+										{image : '../../images/home1.jpg'},
+										{image : '../../images/home2.jpg'},  
+										{image : '../../images/home3.jpg'}
 								]
 	});
 });
