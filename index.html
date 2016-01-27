@@ -622,20 +622,38 @@
 										<button class="btn btn-default active" data-value="yes"><i class="fa fa-smile-o"></i>Yes</button>
 										<button class="btn btn-default" data-value="no"><i class="fa fa-frown-o"></i>No</button>
 									</div>
-									<div class="col-sm-6">
+									<div class="col-sm-4">
 										<input type="text" name="Name" placeholder="YOUR NAME*" class="form-control required fromName" />
 									</div>
-									<div class="col-sm-6">
+									<div class="col-sm-4">
+										<select required>
+											<option value="" disabled selected>Select A Meal</option>
+  											<option value="Prime Rib au Jus">Prime Rib au Jus</option>
+  											<option value="Chicken Kiev">Chicken Kiev</option>
+  											<option value="Vegetarian">Vegetarian</option>
+  											<option value="Kids Meal">Kids Meal</option>
+										</select>
+									</div>
+									<div class="col-sm-4">
 										<input type="email" name="Email" placeholder="YOUR EMAIL*" class="form-control required fromEmail"  />
 									</div>
 								</section>
 								
 								<section>
 									<h3><i class="icon icon-arrow-right"></i>Who else is comming with you?<i class="icon icon-arrow-left"></i></h3>
-									<div class="col-md-8">
+									<div class="col-sm-4">
 										<input type="text" name="guest" id="guest" placeholder="GUEST NAME" class="form-control" />
 									</div>
-									<div class="col-md-4">
+									<div class="col-sm-4">
+										<select required>
+											<option value="" disabled selected>Select A Meal</option>
+  											<option value="Prime Rib au Jus">Prime Rib au Jus</option>
+  											<option value="Chicken Kiev">Chicken Kiev</option>
+  											<option value="Vegetarian">Vegetarian</option>
+  											<option value="Kids Meal">Kids Meal</option>
+										</select>
+									</div>
+									<div class="col-sm-4">
 										<button id="add_guest" class="btn btn-color add_button" data-input="guest" data-wrapper="guest_list">+ Add Guest</button>
 									</div>
 									<div id="guest_list" class="add_list col-md-12" data-count="2">
