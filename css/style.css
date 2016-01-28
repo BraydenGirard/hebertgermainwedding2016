@@ -2192,6 +2192,9 @@ fieldset[disabled] .btn.ribbon.active {
   background-color: #939499;
   z-index: 4;
 }
+.timeline .event_left_after {
+  margin-top: 150px;
+}
 .timeline .event_right {
   clear: right;
   float: right;
