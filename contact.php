@@ -11,9 +11,9 @@
 	or subject, the default values (below) will be used.
 */
 $emailto = 'brayden@daydreamdev.com'; 	// Insert the email address that will receive the messages
-$fromName = 'Contact';					// Insert a default "Name" email address (this field will be displayed in the email header)
-$fromEmail = 'default@yourdomain.com';	// Insert a default "From" email address (this field will be displayed in the email header)
-$subject = 'Lilac Contact Form';		// Insert a default contact form subject
+$fromName = 'RSVP';					// Insert a default "Name" email address (this field will be displayed in the email header)
+$fromEmail = 'rsvp@hebertgermainwedding2016.ca';	// Insert a default "From" email address (this field will be displayed in the email header)
+$subject = 'RSVP';		// Insert a default contact form subject
 
 
 
