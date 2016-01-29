@@ -1937,7 +1937,7 @@ fieldset[disabled] .btn.ribbon.active {
   transform: rotate(35deg);
 }
 .quote-fullwidth {
-  background-image: url("../images/quote-img.jpg");
+  background-image: url("images/quote-img.jpg");
   font-size: 38pt;
   line-height: 38pt;
   padding: 100px 0;
@@ -2588,7 +2588,7 @@ fieldset[disabled] .btn.ribbon.active {
 /* #Bridesmaids & Groomsmen
 ================================================== */
 #bridesmaidsgroomsmen {
-  background-image: url("../images/wedding-img.jpg");
+  background-image: url("images/wedding-img.jpg");
 }
 .bridesmaids-groomsmen-buttons .btn {
   margin: 10px;
@@ -2791,18 +2791,18 @@ fieldset[disabled] .btn.ribbon.active {
   margin-top: 20px;
 }
 .wedding-gifts #gift-list {
-  background-image: url("../images/wedding-gift1.jpg");
+  background-image: url("images/wedding-gift1.jpg");
 }
 .wedding-gifts #help-wedding {
-  background-image: url("../images/wedding-gift2.jpg");
+  background-image: url("images/wedding-gift2.jpg");
 }
 .wedding-gifts #help-honeymoon {
-  background-image: url("../images/wedding-gift3.jpg");
+  background-image: url("images/wedding-gift3.jpg");
 }
 /* #Gallery
 ================================================== */
 #gallery {
-  background-image: url("../images/img-gallery.jpg");
+  background-image: url("images/img-gallery.jpg");
 }
 .gallery-desc {
   color: rgba(255, 255, 255, 0.7) !important;
@@ -4998,3 +4998,4 @@ div.dark_square #pp_full_res .pp_inline {
     background-image: url('../images/divider_5@2x.png');
   }
 }
+
