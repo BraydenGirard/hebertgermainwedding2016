@@ -813,7 +813,7 @@ var Lilac;
 
                         $.ajax({
                             type: 'POST',
-                            url: 'contact.php',
+                            url: 'https://script.google.com/macros/s/AKfycbxbbKeyLKrwJuz2eV2-0h2w_qL_BpFB9QMC4RSGXi5uD2wWE6LC/exec',
                             data: html,
                             success: function (msg) {
                                 stopSpin();
