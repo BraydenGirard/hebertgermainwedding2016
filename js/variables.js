@@ -6,10 +6,6 @@ var	mobileMenuTitle = "Menu",					//The title of the mobile menu
 	
 	hero100PercentHeight = false,				//If true, the hero section (home) will be set with a minimum height of 100% window height. If false, hero height will be the height of its content.
 	
-	//TWITTER VARIABLE
-	twitter_username = "brookehebert19",		//Replace with your own Twitter username
-	
-	
 	//GOOGLE MAP VARIABLES
 	map_canvas_id = "map_canvas",				//The HTML "id" of the map canvas
 	map_color = "#939499",						//Google map color
