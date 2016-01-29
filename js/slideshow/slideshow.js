@@ -8,9 +8,9 @@ $(function($){
 		// Components							
 		slide_links			:	'false',
 		slides 				:  	[			// Slideshow Images
-										{image : '../../images/home1.jpg'},
-										{image : '../../images/home2.jpg'},  
-										{image : '../../images/home3.jpg'}
+										{image : 'images/home1.jpg'},
+										{image : 'images/home2.jpg'},  
+										{image : 'images/home3.jpg'}
 								]
 	});
 });
