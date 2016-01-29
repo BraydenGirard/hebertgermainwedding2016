@@ -2588,7 +2588,7 @@ fieldset[disabled] .btn.ribbon.active {
 /* #Bridesmaids & Groomsmen
 ================================================== */
 #bridesmaidsgroomsmen {
-  background-image: url("images/wedding-img.jpg");
+  background-image: url("../images/wedding-img.jpg");
 }
 .bridesmaids-groomsmen-buttons .btn {
   margin: 10px;
@@ -4998,4 +4998,3 @@ div.dark_square #pp_full_res .pp_inline {
     background-image: url('../images/divider_5@2x.png');
   }
 }
-
