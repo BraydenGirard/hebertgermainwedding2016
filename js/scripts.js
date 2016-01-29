@@ -25,7 +25,6 @@ var Lilac;
             sendingMail: false,
             mobileMenuTitle: mobileMenuTitle,
             hero100PercentHeight: hero100PercentHeight,
-            twitter_username: twitter_username,
             map_canvas_id: map_canvas_id,
             map_color: map_color,
             map_initial_zoom: map_initial_zoom,
@@ -96,16 +95,6 @@ var Lilac;
                  * Initialize Google Maps and populate with concerts locations
                  */
                 $tis.googleMap();
-
-                /**
-                 * Get latest tweets
-                 */
-                $tis.getLatestTweets();
-
-                /**
-                 * Get Instagram feed
-                 */
-                $tis.getInstagram();
 
                 /**
                  * Create PrettyPhoto links
@@ -514,84 +503,6 @@ var Lilac;
                     createMarker(map_markers[i]);
                     i += 1;
                 }
-            },
-
-            getLatestTweets: function () {
-
-                var $tis = this;
-
-                $('.tweet').html('<div class="heartbeat"></div>');
-
-                var twitterBox = document.createElement('div');
-                twitterBox.setAttribute('id', 'twitter-box');
-
-                $('body').append(twitterBox);
-
-                $("#twitter-box").css({display: 'none'});
-
-                try {
-                    $("#twitter-box").tweet({
-                        username: $tis.twitter_username,
-                        modpath: 'twitter/',
-                        count: 8,
-                        loading_text: 'Loading tweets...',
-                        template: '<h3>{screen_name}</h3><div class="info"><a href="http://twitter.com/{screen_name}" target="_blank">@{screen_name}</a> | <a href="http://twitter.com/{screen_name}/statuses/{tweet_id}/" target="_blank" class="time">{tweet_relative_time}</a></div><div>{text}</div>'
-                    });
-                } catch (err) {
-                    console.log("Your twitter account is misconfigured. " + err);
-                }
-
-                var index = 0,
-                    len = $(".tweet").length;
-
-                $("#twitter-box li").each(function () {
-                    if (index < len) {
-                        $(".tweet").eq(index).html($(this).html());
-                        index += 1;
-                    } else {
-                        return false;
-                    }
-                });
-
-                $("#twitter-box").remove();
-            },
-
-            getInstagram: function () {
-
-                var $tis = this;
-
-                $('.instagram').html('<div class="heartbeat"></div>');
-
-                $.ajax({
-                    type: 'post',
-                    url: 'instagram/instagram.php',
-                    contentType: 'application/json',
-                    dataType: 'json',
-                    success: function (json) {
-                        var feed = $.parseJSON(json),
-                            len = $(".instagram").length,
-                            index = 0,
-                            feedLen = 0,
-                            i = 0;
-
-                        if (feed !== '' && feed.hasOwnProperty("data")) {
-                            feedLen = feed.data.length;
-                        }
-
-                        while (i < feedLen) {
-                            if (index < len) {
-                                $(".instagram").eq(index).html('<img src="' + feed.data[i].images.standard_resolution.url + '" alt="" /><span><a href="' + feed.data[i].images.standard_resolution.url + '" data-gal="prettyPhoto[gallery]" title="' + feed.data[i].caption.text + '"><i class="fa fa-link"></i></a><a href="' + feed.data[i].link + '" target="_blank" title="View on Instagram"><i class="fa fa-external-link"></i></a></span>');
-                                index += 1;
-                            }
-                            i += 1;
-                        }
-
-                        $tis.createPrettyPhoto();
-                    },
-                    error: function () {
-                        console.log("Error getting Instagram feed");
-                    }
-                });
             },
 
             createPrettyPhoto: function () {
