@@ -633,12 +633,11 @@
 								<section class="highlighted">
 									<h3><i class="icon icon-arrow-right"></i>Will you be attending the wedding?<i class="icon icon-arrow-left"></i></h3>
 									<div class="radio-lilac col-sm-12">
-										<button class="btn btn-default active" onclick="setAttendingTrue('userYes')"><i class="fa fa-smile-o"></i>Yes</button>
-										<button class="btn btn-default" onclick="setAttendingFalse('userNo')"><i class="fa fa-frown-o"></i>No</button>
+										<button class="btn btn-default active" onclick="setAttendingTrue('userAttending')"><i class="fa fa-smile-o"></i>Yes</button>
+										<button class="btn btn-default" onclick="setAttendingFalse('userAttending')"><i class="fa fa-frown-o"></i>No</button>
 									</div>
 									
-									<input id="userYes" type="radio" name="attending" value="yes" checked hidden/>
-  									<input id="userNo" type="radio" name="attending" value="no" hidden/>
+									<input id="userAttending" type="text" name="userAttending" class="form-control" value="yes" hidden />
 									
 									<div class="col-sm-4">
 										<input id="name" type="text" name="name" placeholder="YOUR NAME*" class="form-control" required />
@@ -749,11 +748,11 @@
 	
 	<script>
 		function setAttendingTrue(user) {
-    		document.getElementById(user).checked = true;
+    		document.getElementById(user).value = "yes";
 		}
 		
 		function setAttendingFalse(user) {
-    		document.getElementById(user).checked = false;
+    		document.getElementById(user).value = "no";
 		}
 	</script>
 </body>
