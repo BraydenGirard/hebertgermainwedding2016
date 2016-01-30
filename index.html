@@ -637,39 +637,33 @@
 										<button class="btn btn-default" name="attending" value="no"><i class="fa fa-frown-o"></i>No</button>
 									</div>
 									<div class="col-sm-4">
-										<input id="name" type="text" name="name" placeholder="YOUR NAME*" class="form-control required fromName" />
+										<input id="name" type="text" name="name" placeholder="YOUR NAME*" class="form-control required" />
 									</div>
 									<div class="col-sm-4">
 										<input id="meal" type="text" name="meal" placeholder="YOUR MEAL*" class="form-control required" />
 									</div>
 									<div class="col-sm-4">
-										<input id="email" type="email" name="email" placeholder="YOUR EMAIL*" class="form-control required fromEmail" />
+										<input id="email" type="email" name="email" placeholder="YOUR EMAIL*" class="form-control required" />
 									</div>
 									<div class="col-sm-12">
 										<p>MEAL CHOICES: Prime Rib au Jus, Chicken Kiev, Vegetarian, Kids</p>
 									</div>
 								</section>
 								
-								<section>
-									<h3><i class="icon icon-arrow-right"></i>Who else is comming or not?<i class="icon icon-arrow-left"></i></h3>
-									<div class="col-sm-6">
-										<input id="guest" type="text" name="guest" placeholder="GUEST NAME*" class="form-control" />
+								<section class="highlighted">
+									<h3><i class="icon icon-arrow-right"></i>Will anyone else be attending or not attending the wedding?<i class="icon icon-arrow-left"></i></h3>
+									<div id="guestAttending1" name="guestAttending1" class="radio-lilac col-sm-12">
+										<button class="btn btn-default active" value="yes"><i class="fa fa-smile-o"></i>Yes</button>
+										<button class="btn btn-default" value="no"><i class="fa fa-frown-o"></i>No</button>
 									</div>
-									<div class="col-sm-6">
-										<input id="guestMeal" type="text" name="guestMeal" placeholder="GUEST MEAL*" class="form-control" />
+									<div class="col-sm-4">
+										<input id="guestName1" type="text" name="guestName1" placeholder="GUEST NAME*" class="form-control" />
 									</div>
-								
-									<div class="col-sm-12">
-										<button id="addGuest" class="btn btn-color add_button" data-input="yes" data-wrapper="guest_list">Attending</button>
-									</div>
-									
-									<div class="col-sm-12">
-										<button id="addGuest" class="btn btn-color add_button" data-input="no" data-wrapper="guest_list">Not Attending</button>
-									</div>
-									<div id="guest_list" class="add_list col-md-12" data-count="0">
-									
+									<div class="col-sm-4">
+										<input id="guestMeal1" type="text" name="guestMeal1" placeholder="GUEST MEAL*" class="form-control" />
 									</div>
 								</section>
+				
 								
 								<section class="highlighted">
 									<div class="col-sm-12">
