@@ -633,9 +633,13 @@
 								<section class="highlighted">
 									<h3><i class="icon icon-arrow-right"></i>Will you be attending the wedding?<i class="icon icon-arrow-left"></i></h3>
 									<div class="radio-lilac col-sm-12">
-										<input type="radio" name="attending" value="yes" class="btn btn-default active" ><i class="fa fa-smile-o"></i>Yes</input>
-										<input type="radio" name="attending" value="no" class="btn btn-default" ><i class="fa fa-frown-o"></i>No</input>
+										<button class="btn btn-default active" onclick="setAttendingTrue('user')"><i class="fa fa-smile-o"></i>Yes</button>
+										<button class="btn btn-default" onclick="setAttendingFalse('user')"><i class="fa fa-frown-o"></i>No</button>
 									</div>
+									
+									<input type="radio" name="attending" value="yes" checked hidden/>
+  									<input type="radio" name="attending" value="no" hidden/>
+									
 									<div class="col-sm-4">
 										<input id="name" type="text" name="name" placeholder="YOUR NAME*" class="form-control" required />
 									</div>
@@ -741,6 +745,16 @@
 		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 		g.src='//www.google-analytics.com/ga.js';
 		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+	
+	<script>
+		function setAttendingTrue(user) {
+    		document.getElementById(user).checked = true;
+		}
+		
+		function setAttendingFalse(user) {
+    		document.getElementById(user).checked = false;
+		}
 	</script>
 </body>
 </html>
