@@ -632,18 +632,18 @@
 							<div class="form-wrap">
 								<section class="highlighted">
 									<h3><i class="icon icon-arrow-right"></i>Will you be attending the wedding?<i class="icon icon-arrow-left"></i></h3>
-									<div data-value="attending_wedding" class="radio-lilac col-sm-12">
-										<button class="btn btn-default active" data-value="yes"><i class="fa fa-smile-o"></i>Yes</button>
-										<button class="btn btn-default" data-value="no"><i class="fa fa-frown-o"></i>No</button>
+									<div class="radio-lilac col-sm-12">
+										<button class="btn btn-default active" name="attending" value="yes"><i class="fa fa-smile-o"></i>Yes</button>
+										<button class="btn btn-default" name="attending" value="no"><i class="fa fa-frown-o"></i>No</button>
 									</div>
 									<div class="col-sm-4">
-										<input type="text" name="Name" placeholder="YOUR NAME*" class="form-control required fromName" />
+										<input id="name" type="text" name="name" placeholder="YOUR NAME*" class="form-control required fromName" />
 									</div>
 									<div class="col-sm-4">
-										<input type="text" name="Meal" placeholder="YOUR MEAL*" class="form-control required" />
+										<input id="meal" type="text" name="meal" placeholder="YOUR MEAL*" class="form-control required" />
 									</div>
 									<div class="col-sm-4">
-										<input type="email" name="Email" placeholder="YOUR EMAIL*" class="form-control required fromEmail" />
+										<input id="email" type="email" name="email" placeholder="YOUR EMAIL*" class="form-control required fromEmail" />
 									</div>
 									<div class="col-sm-12">
 										<p>MEAL CHOICES: Prime Rib au Jus, Chicken Kiev, Vegetarian, Kids</p>
@@ -653,18 +653,18 @@
 								<section>
 									<h3><i class="icon icon-arrow-right"></i>Who else is comming or not?<i class="icon icon-arrow-left"></i></h3>
 									<div class="col-sm-6">
-										<input type="text" name="guest" id="guest" placeholder="GUEST NAME*" class="form-control" />
+										<input id="guest" type="text" name="guest" placeholder="GUEST NAME*" class="form-control" />
 									</div>
 									<div class="col-sm-6">
-										<input type="text" name="guestMeal" placeholder="GUEST MEAL*" class="form-control" />
+										<input id="guestMeal" type="text" name="guestMeal" placeholder="GUEST MEAL*" class="form-control" />
 									</div>
 								
 									<div class="col-sm-12">
-										<button id="add_guest" class="btn btn-color add_button" data-input="guest" data-wrapper="guest_list">Attending</button>
+										<button id="addGuest" class="btn btn-color add_button" data-input="yes" data-wrapper="guest_list">Attending</button>
 									</div>
 									
 									<div class="col-sm-12">
-										<button id="add_guest" class="btn btn-color add_button" data-input="guest" data-wrapper="guest_list">Not Attending</button>
+										<button id="addGuest" class="btn btn-color add_button" data-input="no" data-wrapper="guest_list">Not Attending</button>
 									</div>
 									<div id="guest_list" class="add_list col-md-12" data-count="0">
 									
@@ -673,7 +673,7 @@
 								
 								<section class="highlighted">
 									<div class="col-sm-12">
-										<textarea name="Message" placeholder="LEAVE A NOTE (OPTIONAL)" class="form-control"></textarea> 
+										<textarea id="message" name="message" placeholder="LEAVE A NOTE (OPTIONAL)" class="form-control"></textarea> 
 										<div class="form_status_message"></div>
 									</div>
 								</section>
