@@ -701,52 +701,6 @@ var Lilac;
                         stopSpin,
                         spinIcon = [];
 
-                    $fields.each(function () {
-                        var $field = $(this);
-
-                        if ($field.attr('type') === "hidden") {
-                            if ($field.hasClass('subject')) {
-                                html += "&subject=" + $field.val();
-                            } else if ($field.hasClass('fromName') || $field.hasClass('fromname')) {
-                                html += "&fromname=" + $field.val();
-                            } else if ($field.hasClass('fromEmail') || $field.hasClass('fromemail')) {
-                                html += "&fromemail=" + $field.val();
-                            } else if ($field.hasClass('emailTo') || $field.hasClass('emailto')) {
-                                html += "&emailto=" + $field.val();
-                            }
-                        } else {
-                            if ($field.hasClass('required') && $field.val() === "") {
-                                $field.addClass('invalid');
-                                error = true;
-                            } else if ($field.attr('type') === "email" && $field.val() !== "" && re.test($field.val()) === false) {
-                                $field.addClass('invalid');
-                                error = true;
-                            } else if ($field.attr('id') !== "recaptcha_response_field") {
-                                $field.removeClass('invalid');
-                                if ($field.hasClass('subject')) {
-                                    html += "&subject=" + $field.val();
-                                    html += "&subject_label=" + $field.attr("name");
-                                } else if ($field.hasClass('fromName') || $field.hasClass('fromname')) {
-                                    html += "&fromname=" + $field.val();
-                                    html += "&fromname_label=" + $field.attr("name");
-                                } else if ($field.hasClass('fromEmail') || $field.hasClass('fromemail')) {
-                                    html += "&fromemail=" + $field.val();
-                                    html += "&fromemail_label=" + $field.attr("name");
-                                } else if ($field.hasClass('radio-lilac')) {
-                                    html += "&field" + len + "_label=" + $field.data("value");
-                                    html += "&field" + len + "_value=" + $('.active', $field).data("value");
-                                    len += 1;
-                                } else {
-                                    html += "&field" + len + "_label=" + $field.attr("name");
-                                    html += "&field" + len + "_value=" + $field.val();
-                                    len += 1;
-                                }
-                            }
-                        }
-                    });
-
-                    html += "&len=" + len;
-
                     showError = function () {
                         $submit_btn.width($submit_btn.width());
 
@@ -816,7 +770,6 @@ var Lilac;
                             url: 'https://script.google.com/macros/s/AKfycbxbbKeyLKrwJuz2eV2-0h2w_qL_BpFB9QMC4RSGXi5uD2wWE6LC/exec',
                             dataType: 'json',
                             data: $("#form-rsvp").serialize(),
-                            data: html,
                             success: function (msg) {
                                 stopSpin();
 
