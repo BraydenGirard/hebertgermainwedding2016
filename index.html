@@ -654,16 +654,55 @@
 								</section>
 								
 								<section class="highlighted">
-									<h3><i class="icon icon-arrow-right"></i>Will anyone else be attending or not attending the wedding?<i class="icon icon-arrow-left"></i></h3>
-									<div id="guestAttending1" name="guestAttending1" class="radio-lilac col-sm-12">
-										<button class="btn btn-default active" value="yes"><i class="fa fa-smile-o"></i>Yes</button>
-										<button class="btn btn-default" value="no"><i class="fa fa-frown-o"></i>No</button>
+									<h3><i class="icon icon-arrow-right"></i>Add additional RSVP's below.<i class="icon icon-arrow-left"></i></h3>
+									<br>
+									<h3><i class="icon icon-arrow-right"></i>Additional RSVP 1 attending?<i class="icon icon-arrow-left"></i></h3>
+									<div class="radio-lilac col-sm-12">
+										<button class="btn btn-default active" onclick="setAttendingTrue('guestAttending1')"><i class="fa fa-smile-o"></i>Yes</button>
+										<button class="btn btn-default" onclick="setAttendingFalse('guestAttending1')"><i class="fa fa-frown-o"></i>No</button>
 									</div>
-									<div class="col-sm-4">
+									
+									<input id="guestAttending1" type="hidden" name="guestAttending1" class="form-control" value="yes" />
+									
+									<div class="col-sm-6">
 										<input id="guestName1" type="text" name="guestName1" placeholder="GUEST NAME*" class="form-control" />
 									</div>
-									<div class="col-sm-4">
+									<div class="col-sm-6">
 										<input id="guestMeal1" type="text" name="guestMeal1" placeholder="GUEST MEAL*" class="form-control" />
+									</div>
+								</section>
+								
+								<section class="highlighted">
+									<h3><i class="icon icon-arrow-right"></i>Additional RSVP 2 attending?<i class="icon icon-arrow-left"></i></h3>
+									<div class="radio-lilac col-sm-12">
+										<button class="btn btn-default active" onclick="setAttendingTrue('guestAttending2')"><i class="fa fa-smile-o"></i>Yes</button>
+										<button class="btn btn-default" onclick="setAttendingFalse('guestAttending2')"><i class="fa fa-frown-o"></i>No</button>
+									</div>
+									
+									<input id="guestAttending2" type="hidden" name="guestAttending2" class="form-control" value="yes" />
+									
+									<div class="col-sm-6">
+										<input id="guestName2" type="text" name="guestName2" placeholder="GUEST NAME*" class="form-control" />
+									</div>
+									<div class="col-sm-6">
+										<input id="guestMeal2" type="text" name="guestMeal2" placeholder="GUEST MEAL*" class="form-control" />
+									</div>
+								</section>
+								
+								<section class="highlighted">
+									<h3><i class="icon icon-arrow-right"></i>Additional RSVP 3 attending?<i class="icon icon-arrow-left"></i></h3>
+									<div class="radio-lilac col-sm-12">
+										<button class="btn btn-default active" onclick="setAttendingTrue('guestAttending3')"><i class="fa fa-smile-o"></i>Yes</button>
+										<button class="btn btn-default" onclick="setAttendingFalse('guestAttending3')"><i class="fa fa-frown-o"></i>No</button>
+									</div>
+									
+									<input id="guestAttending3" type="hidden" name="guestAttending3" class="form-control" value="yes" />
+									
+									<div class="col-sm-6">
+										<input id="guestName3" type="text" name="guestName3" placeholder="GUEST NAME*" class="form-control" />
+									</div>
+									<div class="col-sm-6">
+										<input id="guestMeal3" type="text" name="guestMeal3" placeholder="GUEST MEAL*" class="form-control" />
 									</div>
 								</section>
 				
