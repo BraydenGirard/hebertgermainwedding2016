@@ -772,14 +772,11 @@ var Lilac;
                             data: $("#form-rsvp").serialize(),
                             success: function (msg) {
                                 stopSpin();
-
-                                if (msg === 'ok') {
-                                    showSuccess();
-                                    $form[0].reset();
-                                } else {
-                                    showError();
-                                }
-
+                               
+                                showSuccess();
+                                
+                                $form[0].reset();
+                       
                                 $tis.sendingMail = false;
                             },
                             error: function () {
@@ -855,36 +852,6 @@ var Lilac;
                     $t.addClass("active");
                 });
 
-                // Capture "Add guest" button click event.
-                $(".add_button").on('click', function (e) {
-                    e.preventDefault();
-
-                    var $t = $(this),
-                        $wrapper = $t.data("wrapper"),
-                        html,
-                        count = parseInt($("#" + $wrapper).data("count"), 10) + 1 || 1,
-                        $input = $("#" + $t.data("input")),
-                        val = $input.val();
-
-                    if (val === "") {
-                        $input.addClass("invalid");
-                        return false;
-                    }
-
-                    html = '<div class="input-group">' +
-                            '<input type="text" class="form-control" name="' + $t.data("input") + '_' + count + '" value="' + val + '" />' +
-                            '<span class="input-group-addon"><i class="fa fa-trash"></i></span>' +
-                            '</div>';
-
-                    $("#" + $wrapper).data("count", count).append(html);
-                    $input.val('');
-                    $input.removeClass("invalid");
-                });
-
-                // Capture "Remove guest" button click event.
-                $('.add_list').on('click', '.input-group-addon', function () {
-                    $(this).closest(".input-group").remove();
-                });
             },
 
             animateElems: function () {
