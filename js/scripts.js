@@ -691,7 +691,6 @@ var Lilac;
 
                     var $submit_btn = $(this),
                         $form = $submit_btn.closest("form"),
-                        $fields = $("input, textarea, .radio-lilac", $form),
                         len = 0,
                         re = /\S+@\S+\.\S+/,
                         html = "contact",
