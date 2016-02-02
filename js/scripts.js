@@ -698,7 +698,7 @@ var Lilac;
                         showSuccess,
                         stopSpin,
                         spinIcon = [];
-                        
+                        console.log($form);
                         console.log($form.elements["name"].value);
                         if($form.elements["name"].value === "") {
                             error = true;
