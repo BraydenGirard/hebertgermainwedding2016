@@ -699,7 +699,7 @@ var Lilac;
                         stopSpin,
                         spinIcon = [];
                         console.log($form);
-                        console.log($form.elements["name"].value);
+                        console.log($form.val("name"));
                         if($form.elements["name"].value === "") {
                             error = true;
                         }
