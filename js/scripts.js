@@ -38,7 +38,7 @@ var Lilac;
             c_minutes: c_minutes,
             c_seconds: c_seconds,
             countdownEndMsg: countdownEndMsg,
-https://script.google.com/macros/s/AKfycbxbbKeyLKrwJuz2eV2-0h2w_qL_BpFB9QMC4RSGXi5uD2wWE6LC/exec
+
             init: function () {
 
                 var $tis = this;
