@@ -698,12 +698,7 @@ var Lilac;
                         showSuccess,
                         stopSpin,
                         spinIcon = [];
-                        console.log($form);
-                        console.log($form.val("name"));
-                        if($form.elements["name"].value === "") {
-                            error = true;
-                        }
-                        
+                    
 
                     showError = function () {
                         $submit_btn.width($submit_btn.width());
