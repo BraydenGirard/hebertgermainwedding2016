@@ -38,7 +38,7 @@ var Lilac;
             c_minutes: c_minutes,
             c_seconds: c_seconds,
             countdownEndMsg: countdownEndMsg,
-
+https://script.google.com/macros/s/AKfycbxbbKeyLKrwJuz2eV2-0h2w_qL_BpFB9QMC4RSGXi5uD2wWE6LC/exec
             init: function () {
 
                 var $tis = this;
@@ -691,7 +691,6 @@ var Lilac;
 
                     var $submit_btn = $(this),
                         $form = $submit_btn.closest("form"),
-                        len = 0,
                         re = /\S+@\S+\.\S+/,
                         html = "contact",
                         error = false,
@@ -699,6 +698,12 @@ var Lilac;
                         showSuccess,
                         stopSpin,
                         spinIcon = [];
+                        
+                        console.log($form.elements["name"].value);
+                        if($form.elements["name"].value === "") {
+                            error = true;
+                        }
+                        
 
                     showError = function () {
                         $submit_btn.width($submit_btn.width());
