@@ -810,11 +810,11 @@ var Lilac;
 
                 $tis.sendingMail = false;
               },
-              error: function (err) {
+              error: function (err, msg) {
                 stopSpin();
                 console.log("The error is: ");
                 console.log(err);
-
+                console.log(msg);
                 showError();
                 $tis.sendingMail = false;
               }
