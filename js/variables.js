@@ -17,8 +17,8 @@ var mobileMenuTitle = "Menu", //The title of the mobile menu
 
   //CONTACT FORM VARIABLES
   contact_form_success_msg = "Form successfully submitted! :)",
-  contact_form_error_msg = "Error sending message :( - This form does not work in Safari, please try a different browser.",
-
+  contact_form_error_msg = "Error sending message :(",
+  contact_form_safari_error_msg = "Please use another browser, this form does not work on Safari.",
 
   //COUNTDOWN VARIABLES
   c_days = "DAYS", //Countdown "Days" label

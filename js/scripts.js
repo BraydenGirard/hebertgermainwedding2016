@@ -727,6 +727,7 @@ var Lilac;
             html = "contact",
             error = false,
             showError,
+            showSafariError,
             showSuccess,
             stopSpin,
             spinIcon = [];
@@ -751,6 +752,27 @@ var Lilac;
             });
 
             $(".form_status_message").html('<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + contact_form_error_msg + '</div>');
+          };
+
+          showSafariError = function () {
+            $submit_btn.width($submit_btn.width());
+
+            $('i', $submit_btn).each(function () {
+              var $icon = $(this),
+                iClass = $icon.attr("class");
+
+              $icon.removeClass(iClass).addClass('fa fa-times').delay(1500).queue(function (next) {
+                $(this).removeClass('fa fa-times').addClass(iClass);
+                next();
+              });
+            });
+
+            $submit_btn.addClass('btn-danger').delay(1500).queue(function (next) {
+              $(this).removeClass('btn-danger');
+              next();
+            });
+
+            $(".form_status_message").html('<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + contact_form_safari_error_msg + '</div>');
           };
 
           showSuccess = function () {
@@ -796,6 +818,13 @@ var Lilac;
             });
             $submit_btn.addClass('disabled');
 
+            if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+              stopSpin();
+              showSafariError();
+              $tis.sendingMail = false;
+              return;
+            }
+
             $.ajax({
               type: 'POST',
               url: 'https://script.google.com/macros/s/AKfycbxbbKeyLKrwJuz2eV2-0h2w_qL_BpFB9QMC4RSGXi5uD2wWE6LC/exec',
@@ -812,9 +841,6 @@ var Lilac;
               },
               error: function (err, msg) {
                 stopSpin();
-                console.log("The error is: ");
-                console.log(err);
-                console.log(msg);
                 showError();
                 $tis.sendingMail = false;
               }
